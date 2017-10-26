@@ -18,6 +18,7 @@
 		AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */; };
 		AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */; };
 		AC66CA261FA25B1100A98F87 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA251FA25B1100A98F87 /* InternetViewController.swift */; };
+		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsViewController.swift; sourceTree = "<group>"; };
 		AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
 		AC66CA251FA25B1100A98F87 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */,
 				AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */,
 				AC66CA251FA25B1100A98F87 /* InternetViewController.swift */,
+				AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC66CA091FA256D800A98F87 /* ViewController.swift in Sources */,
+				AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */,
 				AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */,
 				AC66CA071FA256D800A98F87 /* AppDelegate.swift in Sources */,
 				AC66CA201FA25AC700A98F87 /* DataViewController.swift in Sources */,
