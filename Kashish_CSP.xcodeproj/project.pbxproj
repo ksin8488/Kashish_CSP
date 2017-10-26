@@ -54,14 +54,38 @@
 		AC66CA051FA256D800A98F87 /* Kashish_CSP */ = {
 			isa = PBXGroup;
 			children = (
-				AC66CA061FA256D800A98F87 /* AppDelegate.swift */,
-				AC66CA081FA256D800A98F87 /* ViewController.swift */,
-				AC66CA0A1FA256D800A98F87 /* Main.storyboard */,
-				AC66CA0D1FA256D800A98F87 /* Assets.xcassets */,
-				AC66CA0F1FA256D800A98F87 /* LaunchScreen.storyboard */,
-				AC66CA121FA256D800A98F87 /* Info.plist */,
+				AC66CA181FA257DA00A98F87 /* Controller */,
+				AC66CA1A1FA2586E00A98F87 /* View */,
+				AC66CA191FA2583A00A98F87 /* Resources */,
 			);
 			path = Kashish_CSP;
+			sourceTree = "<group>";
+		};
+		AC66CA181FA257DA00A98F87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC66CA061FA256D800A98F87 /* AppDelegate.swift */,
+				AC66CA081FA256D800A98F87 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC66CA191FA2583A00A98F87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC66CA0D1FA256D800A98F87 /* Assets.xcassets */,
+				AC66CA121FA256D800A98F87 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC66CA1A1FA2586E00A98F87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC66CA0A1FA256D800A98F87 /* Main.storyboard */,
+				AC66CA0F1FA256D800A98F87 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Kashish_CSP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kashish_CSP/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CTEC.Kashish-CSP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Kashish_CSP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kashish_CSP/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CTEC.Kashish-CSP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
