@@ -18,13 +18,15 @@ public class AlgorithmsViewController : UIViewController
         var algorithmSteps : [String] = []
         
         // TODO: Define algorithm and all steps
-        let algorithm :String = "These are tnsructions to create a project in Java using Eclipse and Github \n"
-        let stepOne :String = "First, ...."
-        let stepTwo :String = "Second, ...."
-        let stepThree :String = ".... ..."
+        let algorithm :String = "These are the instructions to create a project in Java using Ecliipse and Github \n "
+        let stepOne :String = "Open up Eclipse and go to File “New Project” "
+        let stepTwo :String = "Use the triangle to open the project then right-click on the SRC file and create a controller and model package "
+        let stepThree :String = "Right click the controller package and create a controller and runner class "
+        let stepFour : String = "Right click the model package and create a class with the project name "
+        let stepFive :String = "Save changes by creating a new Github Repository "
         
         // TODO: Finish adding all the steps to the algorithm
-        algorithmSteps = [stepOne, stepTwo, stepThree]
+        algorithmSteps = [stepOne, stepTwo, stepThree, stepFour, stepFive]
         
         let attributesDictionary = [NSAttributedStringKey.font : algorithmText.font]
         let fullAttributedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
