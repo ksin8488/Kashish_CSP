@@ -17,7 +17,7 @@ public class AlgorithmsViewController : UIViewController
     {
         var algorithmSteps : [String] = []
         
-        // TODO: Define algorithm and all steps
+        // MARK: - Algorithm definition
         let algorithm :String = "These are the instructions to create a project in Java using Ecliipse and Github \n "
         let stepOne :String = "Open up Eclipse and go to File “New Project” "
         let stepTwo :String = "Use the triangle to open the project then right-click on the SRC file and create a controller and model package "
@@ -33,7 +33,7 @@ public class AlgorithmsViewController : UIViewController
         
         for step in algorithmSteps
         {
-            let bullet :String = "$"
+            let bullet :String = "👾"
             let formattedStep :String = "\n\(bullet) \(step)"
             let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
             let paragraphStyle = createParagraphStyle()
@@ -55,5 +55,11 @@ public class AlgorithmsViewController : UIViewController
         paragraphStyle.headIndent =  35
         
         return paragraphStyle
+    }
+    
+    override public func viewDidLoad()
+    {
+        super.viewDidLoad()
+        setupAlgorithm()
     }
 }
