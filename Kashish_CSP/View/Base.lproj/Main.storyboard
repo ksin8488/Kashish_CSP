@@ -63,6 +63,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="HiH-MX-kSJ"/>
                     </view>
+                    <connections>
+                        <outlet property="algorithmText" destination="VvQ-96-EaG" id="Mem-zc-zgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVm-To-Ibu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
