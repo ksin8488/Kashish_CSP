@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "waterScarcityMap.gif",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "waterScarcityMap@2x.gif",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "waterScarcityMap@3x copy.gif",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

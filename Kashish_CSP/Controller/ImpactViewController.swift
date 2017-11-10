@@ -10,6 +10,21 @@ import UIKit
 
 public class ImpactViewController : UIViewController
 {
+    @IBOutlet weak var appDataPlan: UILabel!
+    @IBOutlet weak var reasonExplination: UILabel!
+    @IBOutlet weak var personalConnection: UILabel!
+    @IBOutlet weak var waterScarcity: UIImageView!
+    @IBOutlet weak var appLayout: UIImageView!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public override func viewDidLoad()
     {
         super.viewDidLoad()
