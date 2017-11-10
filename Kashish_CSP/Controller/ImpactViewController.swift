@@ -16,17 +16,10 @@ public class ImpactViewController : UIViewController
     @IBOutlet weak var waterScarcity: UIImageView!
     @IBOutlet weak var appLayout: UIImageView!
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public override func viewDidLoad()
     {
+        appLayout.image = UIImage(named: "GlobalImpactAppLayout")
+        reasonExplination.text = "here is a test phrase"
         super.viewDidLoad()
     }
 }
