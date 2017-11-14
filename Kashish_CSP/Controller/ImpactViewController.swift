@@ -16,11 +16,21 @@ public class ImpactViewController : UIViewController
 
     @IBOutlet weak var appLayout: UIImageView!
     
-    public override func viewDidLoad()
+    private func addImages() -> Void
     {
         appLayout.image = UIImage(named: "GlobalImpactAppLayout")
+    }
+    
+    private func addText() -> Void
+    {
         reasonExplination.text = "It is importaint to make sure people who need clean water get it."
         personalConnection.text = "I have family in India and I know I would want them to have clean water."
+    }
+    
+    public override func viewDidLoad()
+    {
+        addImages()
+        addText()
         super.viewDidLoad()
     }
 }
