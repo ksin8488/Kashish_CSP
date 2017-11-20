@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC30F59D1FC35F77007ED23E /* Cuddleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30F59C1FC35F77007ED23E /* Cuddleable.swift */; };
+		AC30F59F1FC36019007ED23E /* StuffedAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30F59E1FC36019007ED23E /* StuffedAnimal.swift */; };
 		AC66CA071FA256D800A98F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA061FA256D800A98F87 /* AppDelegate.swift */; };
 		AC66CA091FA256D800A98F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA081FA256D800A98F87 /* ViewController.swift */; };
 		AC66CA0C1FA256D800A98F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC66CA0A1FA256D800A98F87 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC30F59C1FC35F77007ED23E /* Cuddleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuddleable.swift; sourceTree = "<group>"; };
+		AC30F59E1FC36019007ED23E /* StuffedAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffedAnimal.swift; sourceTree = "<group>"; };
 		AC66CA031FA256D800A98F87 /* Kashish_CSP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kashish_CSP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC66CA061FA256D800A98F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC66CA081FA256D800A98F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC30F59B1FC35F39007ED23E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC30F59C1FC35F77007ED23E /* Cuddleable.swift */,
+				AC30F59E1FC36019007ED23E /* StuffedAnimal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AC66C9FA1FA256D800A98F87 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		AC66CA051FA256D800A98F87 /* Kashish_CSP */ = {
 			isa = PBXGroup;
 			children = (
+				AC30F59B1FC35F39007ED23E /* Model */,
 				AC66CA181FA257DA00A98F87 /* Controller */,
 				AC66CA1A1FA2586E00A98F87 /* View */,
 				AC66CA191FA2583A00A98F87 /* Resources */,
@@ -187,6 +201,8 @@
 				AC66CA071FA256D800A98F87 /* AppDelegate.swift in Sources */,
 				AC66CA201FA25AC700A98F87 /* DataViewController.swift in Sources */,
 				AC66CA1C1FA25A9100A98F87 /* CreativityViewController.swift in Sources */,
+				AC30F59F1FC36019007ED23E /* StuffedAnimal.swift in Sources */,
+				AC30F59D1FC35F77007ED23E /* Cuddleable.swift in Sources */,
 				AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */,
 				AC66CA1E1FA25AAA00A98F87 /* AbstractionViewController.swift in Sources */,
 				AC66CA261FA25B1100A98F87 /* InternetViewController.swift in Sources */,
