@@ -69,6 +69,14 @@
             </objects>
             <point key="canvasLocation" x="290" y="727"/>
         </scene>
+        <!--Abstraction View Controller-->
+        <scene sceneID="odN-mL-6Wg">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="gPO-Ve-pcW" customClass="AbstractionViewController" customModule="Kashish_CSP" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Re5-1u-p0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="1413"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="0Nh-ax-PUf">
             <objects>
