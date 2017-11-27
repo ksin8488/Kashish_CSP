@@ -10,7 +10,7 @@ import UIKit
 
 public class AbstractionViewController : UIPageViewController, UIPageViewControllerDataSource
 {
-    //MARK: Ar of subviews
+    //MARK: Array of subviews
     private (set) lazy var orderedAbstractionViews : [UIViewController] =
     {
         return [
@@ -22,7 +22,7 @@ public class AbstractionViewController : UIPageViewController, UIPageViewControl
         ]
     }()
     
-    //Helper method to retriee the correct ViewController
+    //Helper method to retrieve the correct ViewController
     private func newAbstractionViewController(abstractionLevel : String) -> UIViewController
     {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(abstractionLevel)ViewController")
@@ -30,12 +30,70 @@ public class AbstractionViewController : UIPageViewController, UIPageViewControl
     
     public override func viewDidLoad()  //you can also do "overide public func viewDidLoad()" as long as "public" and "override" are the first two
     {
-        super.viewDidLoad()
+        super.viewDidLoad() //superclass called first
+        dataSource = self   //dataSource is a subtype and says it is its own UI
+        
+        if let firstViewController = orderedAbstractionViews.first  //"arrayName.first" gets the first thing in the array
+        {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
     }
     
+    //MARK:- Required Protocol methods for UIPageViewControllerDatasource
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
+    {
+        // Left Swiping Method - grabs current thing from the array and subtracts 1 and calls it "previous Index". if it is less than 0 then it is set as the last one. Also guards If the total views are somehow greater than the previous index to prevent crashing
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+        else
+        {
+        return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        guard previousIndex > 0
+        else
+        {
+            return orderedAbstractionViews.last
+        }
+        
+        guard orderedAbstractionViews.count > previousIndex
+        else
+        {
+            return nil
+        }
+        
+        return orderedAbstractionViews[previousIndex]
+    }
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAter viewController: UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+        else
+        {
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        
+        guard nextIndex >= 0
+        else
+        {
+            return nil
+        }
+        
+        guard nextIndex < orderedAbstractionViews.count
+        else
+        {
+           return orderedAbstractionViews.first
+        }
+        
+        return orderedAbstractionViews[nextIndex]
+    }
 
     
-    
-
 }
 
