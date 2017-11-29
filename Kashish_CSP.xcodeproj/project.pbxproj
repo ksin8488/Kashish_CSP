@@ -22,6 +22,7 @@
 		AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */; };
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
+		AC96A62E1FCF3BAE005C50F8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
+		AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC96A62E1FCF3BAE005C50F8 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 			children = (
 				AC66CA051FA256D800A98F87 /* Kashish_CSP */,
 				AC66CA041FA256D800A98F87 /* Products */,
+				AC96A62C1FCF3BAE005C50F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +128,14 @@
 				AC66CA0F1FA256D800A98F87 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AC96A62C1FCF3BAE005C50F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
