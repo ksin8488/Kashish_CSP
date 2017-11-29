@@ -21,6 +21,7 @@
 		AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */; };
 		AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */; };
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
+		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
 		AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
+		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */,
 				AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */,
 				AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */,
+				AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */,
 				AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */,
 				AC66CA071FA256D800A98F87 /* AppDelegate.swift in Sources */,
+				AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */,
 				AC66CA201FA25AC700A98F87 /* DataViewController.swift in Sources */,
 				AC66CA1C1FA25A9100A98F87 /* CreativityViewController.swift in Sources */,
 				AC30F59F1FC36019007ED23E /* StuffedAnimal.swift in Sources */,
