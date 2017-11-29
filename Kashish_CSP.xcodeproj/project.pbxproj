@@ -19,7 +19,7 @@
 		AC66CA201FA25AC700A98F87 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA1F1FA25AC700A98F87 /* DataViewController.swift */; };
 		AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */; };
 		AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */; };
-		AC66CA261FA25B1100A98F87 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA251FA25B1100A98F87 /* InternetViewController.swift */; };
+		AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */; };
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		AC66CA1F1FA25AC700A98F87 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsViewController.swift; sourceTree = "<group>"; };
 		AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
-		AC66CA251FA25B1100A98F87 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +99,7 @@
 				AC66CA1F1FA25AC700A98F87 /* DataViewController.swift */,
 				AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */,
 				AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */,
-				AC66CA251FA25B1100A98F87 /* InternetViewController.swift */,
+				AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */,
 				AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */,
 			);
 			path = Controller;
@@ -205,7 +205,7 @@
 				AC30F59D1FC35F77007ED23E /* Cuddleable.swift in Sources */,
 				AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */,
 				AC66CA1E1FA25AAA00A98F87 /* AbstractionViewController.swift in Sources */,
-				AC66CA261FA25B1100A98F87 /* InternetViewController.swift in Sources */,
+				AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
