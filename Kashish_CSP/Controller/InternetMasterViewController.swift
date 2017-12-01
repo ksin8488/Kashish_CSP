@@ -21,12 +21,17 @@ public class InternetMasterViewController : UITableViewController
             "Swift Guide"
         ]
     }()
+ 
+    private lazy var addresses : [String] = []
     
     private var detailViewController : InternetDetailViewController?
     
     private func setup() -> Void
     {
-        
+        //TODO: Replace with your correct links
+        addresses = [
+            "https://www.google.com",
+        ]
     }
     
     public override func viewDidLoad()
