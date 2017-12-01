@@ -84,7 +84,12 @@ public class InternetMasterViewController : UITableViewController
                 if indexPath.row == 0
                 {
                     //TODO: Replace with your definitions - great time to use the """ operator
-                    pageText = "All the definitions you wrote........"
+                    pageText = """
+
+                    All the definitions you wrote........
+
+                    """ //""" text """ - makes everything between the quotes text
+
                 }
                 else
                 {
