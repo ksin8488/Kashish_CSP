@@ -184,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="2108.9955022488757"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Internet Samples-->
         <scene sceneID="t1Q-jM-Wsm">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="TUF-vX-ZPq" customClass="InternetMasterViewController" customModule="Kashish_CSP" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,13 +193,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifie" id="5D7-to-BTf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="5D7-to-BTf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5D7-to-BTf" id="3Y4-9m-aoe">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="UOO-bF-17v" kind="showDetail" id="4Jf-0y-lNo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -207,7 +210,7 @@
                             <outlet property="delegate" destination="TUF-vX-ZPq" id="50d-aM-EPS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="NoR-Ub-bd5"/>
+                    <navigationItem key="navigationItem" title="Internet Samples" id="NoR-Ub-bd5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqp-SS-MA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -482,4 +485,7 @@
         <image name="swiftSample@1x" width="1248" height="1244"/>
         <image name="waterScarcityMap" width="390" height="292"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Jf-0y-lNo"/>
+    </inferredMetricsTieBreakers>
 </document>
