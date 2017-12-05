@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count - 1] as! UINavigationController
             
             navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-            splitViewController.delegate = self
+            splitViewController.delegate = self //The "person in charge" of itself is delegate and attaches itself
         }
         return true
     }
@@ -54,7 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 }
 
     //MARK: - SplitViewDelegate
-
+//Method checks if you have collapsed screens
+func splitViewController(_splitViewController: UISplitViewController, collapseSecondary secondaryViewController : UIViewController, onto primaryViewController : UIViewController) -> Bool
+{
+    guard let secondaryAsNavController = secondaryViewController as? UINavigationController else {return false}
+    guard let topAsDetailController = secondaryAsNavController.topViewController as? InternetDetailViewController else {return false}
+    if topAsDetailController.detailAddress == nil
+    {
+        //Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded
+        return true
+    }
+    return false
+}
 
 
 

@@ -12,7 +12,7 @@ public class InternetMasterViewController : UITableViewController
 {
     private (set) lazy var internetTopics : [String] =
     {
-        return [
+        return [    //Titles for Topics
             "Definitions",
             "CSP",
             "CTEC",
@@ -29,14 +29,19 @@ public class InternetMasterViewController : UITableViewController
     private func setup() -> Void
     {
         //TODO: Replace with your correct links
-        addresses = [
+        addresses = [   //apple wants secure sites hence the "https:" part
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
             "https://www.google.com",
         ]
         
-        if let splitView = splitViewController
+        if let splitView = splitViewController  //optional type
         {
             let currentControllers = splitView.viewControllers
-            detailViewController = currentControllers[0] as?
+            detailViewController = currentControllers[0] as?  //as? is cast beacuse we don't know if it has what we need from the 1st part of an array
                 InternetDetailViewController
         }
     }
@@ -46,10 +51,10 @@ public class InternetMasterViewController : UITableViewController
         super.viewDidLoad()
         setup()
         //Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false    //
     }
     
-    // MARK: - table view data source
+    // MARK: - table view data source (methods)
     
     override public func numberOfSections(in tableview: UITableView) -> Int
     {
@@ -64,15 +69,15 @@ public class InternetMasterViewController : UITableViewController
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let currentText = internetTopics[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) //reusing a ce
+        let currentText = internetTopics[indexPath.row] //get the place value of the row that was clicked
         cell.textLabel!.text = currentText
         
         return cell
     }
     
     //MARK: Handle the internal transfer
-    override public func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?)    //internal segue
     {
         if segue.identifier! == "showDetail"
         {
@@ -96,7 +101,7 @@ public class InternetMasterViewController : UITableViewController
                     pageText = internetTopics[indexPath.row]
                 }
                 
-                let controller = segue.destination as!
+                let controller = segue.destination as!  //as! force casts the segue.destination into an InternetDetailViewController
                     InternetDetailViewController
                 
                 controller.detailAddress = urlString
