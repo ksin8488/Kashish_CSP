@@ -16,8 +16,8 @@ class DrawingView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         drawStickFigure().stroke()
-//        drawTurtle()
- //       drawHappyTree()
+        drawTurtle()
+        drawHappyTree()
     }   //ONLY add code to this if you have code else the app will run very slowly due to trying to allocate memory for something that hasn't veen drawn.
     
         private func drawStickFigure() -> UIBezierPath
@@ -42,6 +42,46 @@ class DrawingView: UIView {
         stickFigure.addLine(to: CGPoint(x: 220, y: 300))
     
         return stickFigure
+    }
+    
+    public func drawHappyTree() -> Void
+    {
+        let mario = UIBezierPath()
+        
+        mario.move(to: CGPoint(x: 80, y: 50))
+        mario.addLine(to: CGPoint(x: 120, y: 150))
+        mario.addLine(to: CGPoint(x: 40, y: 150))
+        mario.close()
+        UIColor(patternImage: UIImage(named: "cute_Mario-2")!).setFill()
+        UIColor.brown.setStroke()
+        mario.lineWidth = 2.0
+        mario.fill()
+        mario.stroke()
+        
+        let happyTree = UIBezierPath()
+        
+        UIColor.green.setFill()
+        happyTree.move(to: CGPoint(x: 110, y: 150))
+        happyTree.addLine(to: CGPoint(x: 10, y: 200))
+        happyTree.addLine(to: CGPoint(x: 40, y:150))
+        happyTree.close()
+        happyTree.stroke()
+        happyTree.fill()
+        happyTree.move(to: CGPoint(x: 80, y: 200))
+        happyTree.addLine(to: CGPoint(x:80, y:200))
+        happyTree.lineWidth = 6.0
+        happyTree.stroke()
+    }
+    
+    public func drawTurtle() -> Void
+    {
+        let logo = UIBezierPath()
+        UIColor.white.setFill() //fills the image in white
+        logo.move(to: CGPoint(x: 50, y: 250))
+        logo.addLine(to: CGPoint(x: 100, y: 300))
+        logo.addLine(to:CGPoint(x: 50, y: 350))
+        logo.close()    //draws a line to the starting point as directly as it can
+        logo.fill()     //fills the image/shape
     }
 }
 
