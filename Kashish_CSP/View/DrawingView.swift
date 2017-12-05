@@ -20,25 +20,25 @@ class DrawingView: UIView {
  //       drawHappyTree()
     }   //ONLY add code to this if you have code else the app will run very slowly due to trying to allocate memory for something that hasn't veen drawn.
     
-        private func drawStickFigure(0) -> UIBezierPath
+        private func drawStickFigure() -> UIBezierPath
     {
         let stickFigure = UIBezierPath()
     
-        UIColor.magenta.setStrong()
+        UIColor.cyan.setStroke()  //Sets color of the drawing
         stickFigure.lineWidth = 3.0 //Line width is by points and NOT pixles
     
         stickFigure.addArc(withCenter: CGPoint(x: 200, y: 200),
                            radius: CGFloat(20),
                            startAngle: CGFloat(0),
-                           endAngle: CGFloat(2) * CGFloat.pi)
+                           endAngle: CGFloat(2) * CGFloat.pi,
                            clockwise: true)
-        stickFigure.move(to:CPoint(x: 200, y: 220)) //sets up the path to be traced when stroke is called
+        stickFigure.move(to:CGPoint(x: 200, y: 220)) //sets up the path to be traced when stroke is called
         stickFigure.addLine(to: CGPoint(x: 200, y: 270))
         stickFigure.move(to: CGPoint(x: 180, y: 240))
         stickFigure.addLine(to: CGPoint(x: 220, y: 240))
         stickFigure.move(to: CGPoint(x: 200, y: 270))
         stickFigure.addLine(to: CGPoint(x: 180, y: 300))
-        stickFigure.move(to: CGPoint(x: 200 y: 270))
+        stickFigure.move(to: CGPoint(x: 200, y: 270))
         stickFigure.addLine(to: CGPoint(x: 220, y: 300))
     
         return stickFigure
