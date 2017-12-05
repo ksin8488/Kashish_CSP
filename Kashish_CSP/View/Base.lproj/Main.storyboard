@@ -201,7 +201,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UOO-bF-17v" kind="showDetail" id="4Jf-0y-lNo"/>
+                                    <segue destination="UOO-bF-17v" kind="showDetail" identifier="showDetail" id="4Jf-0y-lNo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -23,6 +23,7 @@
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
 		AC96A62E1FCF3BAE005C50F8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */; };
+		ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				AC66CA0A1FA256D800A98F87 /* Main.storyboard */,
 				AC66CA0F1FA256D800A98F87 /* LaunchScreen.storyboard */,
+				ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */,
 				AC66CA1E1FA25AAA00A98F87 /* AbstractionViewController.swift in Sources */,
 				AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */,
+				ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
