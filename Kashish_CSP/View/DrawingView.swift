@@ -15,7 +15,7 @@ class DrawingView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-        drawStickFigure().stroke()
+        drawStickFigure().stroke()  //until you call stroke or fill, the lines will be there but clear
         drawTurtle()
         drawHappyTree()
     }   //ONLY add code to this if you have code else the app will run very slowly due to trying to allocate memory for something that hasn't veen drawn.
@@ -27,7 +27,7 @@ class DrawingView: UIView {
         UIColor.cyan.setStroke()  //Sets color of the drawing
         stickFigure.lineWidth = 3.0 //Line width is by points and NOT pixles
     
-        stickFigure.addArc(withCenter: CGPoint(x: 200, y: 200),
+        stickFigure.addArc(withCenter: CGPoint(x: 200, y: 200), //addArc is used for circles - Unit Circles
                            radius: CGFloat(20),
                            startAngle: CGFloat(0),
                            endAngle: CGFloat(2) * CGFloat.pi,
@@ -62,8 +62,9 @@ class DrawingView: UIView {
         
         UIColor.green.setFill()
         happyTree.move(to: CGPoint(x: 110, y: 150))
-        happyTree.addLine(to: CGPoint(x: 10, y: 200))
+        happyTree.addLine(to: CGPoint(x: 150, y: 200))
         happyTree.addLine(to: CGPoint(x: 40, y:150))
+     //   happyTree.addLine(to: CGPoint(x: , y: ))
         happyTree.close()
         happyTree.stroke()
         happyTree.fill()
