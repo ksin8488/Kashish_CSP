@@ -23,6 +23,7 @@
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
 		AC96A62E1FCF3BAE005C50F8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */; };
+		ACAAFF3B1FD9D367007F3FC1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */; };
 		ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		AC96A62D1FCF3BAE005C50F8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */,
 				AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */,
 				AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */,
+				ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				AC66CA221FA25AE000A98F87 /* AlgorithmsViewController.swift in Sources */,
 				AC66CA1E1FA25AAA00A98F87 /* AbstractionViewController.swift in Sources */,
 				AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */,
+				ACAAFF3B1FD9D367007F3FC1 /* ArtCell.swift in Sources */,
 				ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@ public class CreativityViewController : UICollectionViewController, UICollection
 {
     private let reuseIdentifier = "artIdentifier"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 0.0)
-    private let itemPerRow : CGFloat = 3
+    private let itemsPerRow : CGFloat = 3
     
     private lazy var artSelection : [UIImage?] =
     {
@@ -78,7 +78,7 @@ public class CreativityViewController : UICollectionViewController, UICollection
         return artSelection.count
     }
     
-    override public func collectionView(_ collectionView: CollectionView, cellForItemAt indexPath: IndexPath : IndexPath) -> UICollectionViewCell
+    override public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
         
