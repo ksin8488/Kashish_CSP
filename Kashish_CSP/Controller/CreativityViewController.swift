@@ -18,16 +18,12 @@ public class CreativityViewController : UICollectionViewController, UICollection
     private lazy var artSelection : [UIImage?] =
     {
         return [
-            UIImage(named: "cute"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "tree"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall"),
-            UIImage(named: "squishBall")
+            UIImage(named: "DrawingView_Art"),
+            UIImage(named: "cute_Mario-2"),
+            UIImage(named: "cute_Mario-2"),
+            UIImage(named: "cute_Mario-2"),
+            UIImage(named: "cute_Mario-2"),
+            UIImage(named: "cute_Mario-2"),
         ]
     }()
     
