@@ -28,12 +28,35 @@ public class CreativityViewController : UICollectionViewController, UICollection
             UIImage(named: "squishBall"),
             UIImage(named: "squishBall"),
             UIImage(named: "squishBall")
-
-
         ]
     }()
     
-    
-    
-
+    var largePhotoIndexPath: IndexPath? //uses a closuers is a way to attach a method - Property with a method attached to it
+    {
+        didSet
+        {
+            var indexPaths = [IndexPath]()
+            if let largePhotoIndexPath = largePhotoIndexPath
+            {
+                indexPaths.append(largePhotoIndexPath)
+            }
+            if let oldValue = oldValue
+            {
+                indexPaths.append(oldValue)
+            }
+            
+            collectionView?.performBatchUpdates(
+                {
+                    self.collectionView?.reloadItems(at: indexPaths)
+                })
+            {
+                completed in
+                
+                if let largePhotoIndexPath = self.largePhotoIndexPath
+                {
+                    self.collectionView?.scrollToItem(at: largePhotoIndexPath, at: .centeredVertically, animated: true)
+                }
+            }
+        }
+   }
 }
