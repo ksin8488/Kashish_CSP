@@ -33,10 +33,10 @@ public class CreativityViewController : UICollectionViewController, UICollection
     
     var largePhotoIndexPath: IndexPath? //uses a closuers is a way to attach a method - Property with a method attached to it
     {
-        didSet
+        didSet  //did i change something? if so change my values?
         {
-            var indexPaths = [IndexPath]()
-            if let largePhotoIndexPath = largePhotoIndexPath
+            var indexPaths = [IndexPath]()  //no optional - guarentted to exist
+            if let largePhotoIndexPath = largePhotoIndexPath    //if it's not nil... (only way it's not itself)
             {
                 indexPaths.append(largePhotoIndexPath)
             }
@@ -45,7 +45,7 @@ public class CreativityViewController : UICollectionViewController, UICollection
                 indexPaths.append(oldValue)
             }
             
-            collectionView?.performBatchUpdates(
+            collectionView?.performBatchUpdates(    //load the stuff that is in the picture
                 {
                     self.collectionView?.reloadItems(at: indexPaths)
                 })
@@ -54,9 +54,92 @@ public class CreativityViewController : UICollectionViewController, UICollection
                 
                 if let largePhotoIndexPath = self.largePhotoIndexPath
                 {
-                    self.collectionView?.scrollToItem(at: largePhotoIndexPath, at: .centeredVertically, animated: true)
+                    self.collectionView?.scrollToItem(at: largePhotoIndexPath,   at: .centeredVertically, animated: true)   //scroll to that part and centers it vertically then animates the movemnt so it can be seen
                 }
             }
         }
    }
+    
+    //MARK: Lifecycle methods
+    override public func viewDidLoad()  //ViewControllers have lifecycles
+    {
+        
+    }
+    
+    //MARK:- UICollectionView methods
+    
+    override public func numberOfSections(in collectioVew: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    override public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int //_ means that it does not need to be named for a variable when called
+    {
+        return artSelection.count
+    }
+    
+    override public func collectionView(_ collectionView: CollectionView, cellForItemAt indexPath: IndexPath : IndexPath) -> UICollectionViewCell
+    {
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+        
+        artCell.backgroundColor = .purple
+        artCell.imageView.image = artSelection[indexPath.row]
+        artCell.imageName.text = "My Art"
+        
+        return artCell
+    }
+    
+    //MARK:- Delegate methods
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath == largePhotoIndexPath
+        {
+            let art = artSelection[indexPath.row]
+            let size = collectionView.bounds.size
+            let widthScale = (size.width / art!.size.width) * CGFloat(0.80)
+            let largeSize = CGSize(width: art!.size.width * widthScale, height: art!.size.height * widthScale)
+            
+            return largeSize
+        }
+        
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func cllectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
+    
+    override public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool
+    {
+        if largePhotoIndexPath == indexPath
+        {
+            largePhotoIndexPath = nil
+        }
+        else
+        {
+            largePhotoIndexPath = indexPath
+        }
+        
+        return false
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
