@@ -14,20 +14,30 @@ public class StartScene : SKScene
     override public func didMove(to view: SKView)
     {
         backgroundColor = UIColor.darkGray
-        let startButton = SKSpriteNode(imageNamed: "Death Star")
-        startButton.position = CGPoint(x: size.width / 2, y: size.height / 2 - 100)
+        let startButton = SKSpriteNode(imageNamed: "Death Star")          //can add any image
+        startButton.position = CGPoint(x: size.width / 2, y: size.height / 2 - 100)     //position of the start button
         startButton.name = "start"
         let starField = SKEmitterNode(fileNamed: "StarField")
         starField?.position = CGPoint(x:size.width/2,y:size.height/2)
-        starField?.zPosition = -1000
+        starField?.zPosition = -1000        //z-index is depth so -1000 is in the FAR back
         addChild(starField!)
         addChild(startButton)
     }
     
     
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) -> Void
     {
+        let currentTouch = touches.first
+        let touchLocation = currentTouch?.location(in: self)
+        let touchedNode = self.atPoint(touchLocation!)
         
+        if (touchedNode.name == "start")
+        {
+            let gameOverScene = GameScene(size: size)
+            gameOverScene.scaleMode = scaleMode
+            let transitionType = SKTransition.flipHorizontal(withDuration: 1.0)
+            view?.presentScene(gameOverScene, transition: transitionType)
+        }
         
     }
 }

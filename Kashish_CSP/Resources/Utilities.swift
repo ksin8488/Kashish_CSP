@@ -20,9 +20,9 @@ struct CollisionCategories
     static let EdgeBody: UInt32 = 0x1 << 4
 }
 
-extension Array
+extension Array //any array can now use the randomElement() function in this project
 {
-    public func randomElement() -> Element?
+    public func randomElement() -> Element? //gets a random things from the array if it doesn't return nil
     {
         if self.count == 0
         {
