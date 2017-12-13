@@ -63,13 +63,13 @@ class DrawingView: UIView {
         UIColor.green.setFill()
         happyTree.move(to: CGPoint(x: 110, y: 150))
         happyTree.addLine(to: CGPoint(x: 150, y: 200))
-        happyTree.addLine(to: CGPoint(x: 40, y:150))
-     //   happyTree.addLine(to: CGPoint(x: , y: ))
+        happyTree.addLine(to: CGPoint(x: 10, y:200))
+        happyTree.addLine(to: CGPoint(x:50 , y:150 ))
         happyTree.close()
         happyTree.stroke()
         happyTree.fill()
         happyTree.move(to: CGPoint(x: 80, y: 200))
-        happyTree.addLine(to: CGPoint(x:80, y:200))
+        happyTree.addLine(to: CGPoint(x:80, y:250))
         happyTree.lineWidth = 6.0
         happyTree.stroke()
     }
