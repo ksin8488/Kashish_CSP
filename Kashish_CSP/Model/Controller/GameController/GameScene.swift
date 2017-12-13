@@ -25,7 +25,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     var rightBounds : CGFloat = 0
     
     let maxLevels = 3
-    let motionManager: CMMotionManager = CMMotionManager()
+    let motionManager: CMMotionManager = CMMotionManager()      //device is turned for motion so uses motion library
     var accelerationX: CGFloat = 0.0
     
     //MARK:- Game Methods
@@ -37,7 +37,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         {
             for invaderCol in 0..<numberOfInvaders
             {
-                let currentInvader :Invader = Invader()
+                let currentInvader :Invader = Invader()     //current invader is invader
                 let halfWidth : CGFloat = currentInvader.size.width / 2
                 let xPosition : CGFloat = size.width / 2 - halfWidth - (CGFloat(numberOfInvaders) * currentInvader.size.width) + 10
                 
