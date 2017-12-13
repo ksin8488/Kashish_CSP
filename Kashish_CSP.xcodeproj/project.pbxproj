@@ -22,6 +22,7 @@
 		AC2AB7251FE1AFDC009794BD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB7201FE1AFDC009794BD /* Player.swift */; };
 		AC2AB7261FE1AFDC009794BD /* PlayerLaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB7211FE1AFDC009794BD /* PlayerLaser.swift */; };
 		AC2AB7271FE1AFDC009794BD /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB7221FE1AFDC009794BD /* Projectile.swift */; };
+		AC2AB72C1FE1BC21009794BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB72A1FE1B26B009794BD /* Main.storyboard */; };
 		AC30F59D1FC35F77007ED23E /* Cuddleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30F59C1FC35F77007ED23E /* Cuddleable.swift */; };
 		AC30F59F1FC36019007ED23E /* StuffedAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30F59E1FC36019007ED23E /* StuffedAnimal.swift */; };
 		AC66CA071FA256D800A98F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA061FA256D800A98F87 /* AppDelegate.swift */; };
@@ -265,6 +266,7 @@
 				AC2AB7141FE1ADB3009794BD /* laser sound.mp3 in Resources */,
 				AC66CA0E1FA256D800A98F87 /* Assets.xcassets in Resources */,
 				AC2AB7151FE1ADB3009794BD /* invader sound.mp3 in Resources */,
+				AC2AB72C1FE1BC21009794BD /* Main.storyboard in Resources */,
 				AC2AB71D1FE1AF72009794BD /* StarField.sks in Resources */,
 				AC2AB7161FE1ADB3009794BD /* powerup sound.mp3 in Resources */,
 			);
