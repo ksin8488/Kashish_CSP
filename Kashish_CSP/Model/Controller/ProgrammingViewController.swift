@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import SpriteKit
 
 public class ProgrammingViewController : UIViewController
 {
-    public override func viewDidLoad()
+    //MARK: UI Components
+    
+    override public func viewDidLoad() -> Void
     {
         super.viewDidLoad()
+        let gameScene = StartScene(size: view.bounds.size)
+        let gameView = view as! SKView
+        
+        gameView.showsFPS = true
+        gameView.showsNodeCount = true      //lets us know the amound of nodes
+        gameView.ignoresSiblingOrder = true
+        
+        gameScene.scaleMode = .resizeFill
+        gameView.presentScene(gameScene)
     }
 }
