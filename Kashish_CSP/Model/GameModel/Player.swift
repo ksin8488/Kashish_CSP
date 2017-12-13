@@ -54,12 +54,12 @@ public class Player: SKSpriteNode
     private func animate() -> Void
     {
         var playerTextures:[SKTexture] = []
-        for i in 1...3
+        for i in 1...3  //for loop goes from 1-3
         {
             playerTextures.append(SKTexture(imageNamed: "x wing\(i)"))
         }
         
-        let playerAnimation = SKAction.repeatForever( SKAction.animate(with: playerTextures, timePerFrame: 0.2))
+        let playerAnimation = SKAction.repeatForever( SKAction.animate(with: playerTextures, timePerFrame: 0.2))    //repeatForever makes it so that the animation will never stop
         self.run(playerAnimation)
     }
     
