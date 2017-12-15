@@ -93,16 +93,16 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             
         }
         
-        if(changeDirection == true)
-        {
-            self.invaderSpeed *= -1
-            self.enumerateChildNodes(withName: "invader")
-            {
-                node, stop in
-            
-            }
-            
-        }
+//        if(changeDirection == true)
+//        {
+//            self.invaderSpeed *= -1
+//            self.enumerateChildNodes(withName: "invader")
+//            {
+//                node, stop in
+//
+//            }
+//
+//        }
         
     }
     
