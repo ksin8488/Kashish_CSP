@@ -106,24 +106,53 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         
     }
     
-    private func invokeInvaderFire() -> Void
+    private func invokeInvaderFire() -> Void    //runs once but has an infinite command as long as the app is runing
     {
-        
+        let fireBullet = SKAction.run()
+        {
+            self.fireInvaderBullet()
+        }
+        let waitToFireInvaderBullet = SKAction.wait(forDuration: 2.5)
+        let invaderFire = SKAction.sequence([fireBullet,waitToFireInvaderBullet])
+        let repeatForeverAction = SKAction.repeatForever(invaderFire)
+        run(repeatForeverAction)
     }
     
     func fireInvaderBullet() -> Void
     {
-       
+       if(invadersThatCanFire.isEmpty)
+       {
+        gameLevel += 1
+        levelComplete()
+        }
+        if let randomInvader = invadersThatCanFire.randomElement()
+        {
+            randomInvader.fireBullet(scene: self)
+        }
     }
     
-    func newGame() -> Void
+    func newGame() -> Void  //transitions screens through code
     {
-        
+        let newGameScene = StartScene(size: size)
+        newGameScene.scaleMode = scaleMode
+        let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+        view?.presentScene(newGameScene,transition: transitionType)
     }
     
     func levelComplete() -> Void
     {
-        
+        if(gameLevel <= maxLevels)
+        {
+            let levelCompleteScene = LevelCompleteScene(size: size)
+            levelCompleteScene.scaleMode = scaleMode
+            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5) //half a second transition
+            view?.presentScene(levelCompleteScene,transition: transitionType)
+        }
+        else
+        {
+            gameLevel = 1
+            newGame()
+        }
     }
     
     
@@ -157,7 +186,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     override public func didSimulatePhysics()
     {
-        
+        player.physicsBody?.velocity = CGVector(dx: accelerationX * 600, dy: 0) //take the acceleration and * it by 600 for change in x (dx like in Calculus?)
     }
 
     //MARK:- Handle Motion
@@ -169,7 +198,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 (accelerometerData: CMAccelerometerData?, error: Error?)
                 in
                     let acceleration = accelerometerData!.acceleration
-                    self.accelerationX = CGFloat(acceleration.x)
+                    self.accelerationX = CGFloat(acceleration.x)        //acceleration of the game is acceleration of the device
                 } )
     }
     

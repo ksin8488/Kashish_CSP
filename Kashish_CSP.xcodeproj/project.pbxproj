@@ -94,6 +94,7 @@
 		AC2AB70E1FE1AC95009794BD /* GameController */ = {
 			isa = PBXGroup;
 			children = (
+				ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */,
 				AC66CA1B1FA25A9100A98F87 /* CreativityViewController.swift */,
 				AC2AB7081FE1AB03009794BD /* GameScene.swift */,
 				AC2AB7091FE1AB03009794BD /* LevelCompleteScene.swift */,
@@ -122,7 +123,6 @@
 				AC2AB7201FE1AFDC009794BD /* Player.swift */,
 				AC2AB7211FE1AFDC009794BD /* PlayerLaser.swift */,
 				AC2AB7221FE1AFDC009794BD /* Projectile.swift */,
-				ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */,
 			);
 			path = GameModel;
 			sourceTree = "<group>";
