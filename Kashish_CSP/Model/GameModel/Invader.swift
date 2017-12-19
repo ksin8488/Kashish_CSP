@@ -26,6 +26,7 @@ public class Invader: SKSpriteNode
         self.physicsBody?.isDynamic = true
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Invader
+        self.physicsBody?.allowsRotation = false
         self.physicsBody?.contactTestBitMask = CollisionCategories.PlayerBullet | CollisionCategories.Player
         self.physicsBody?.collisionBitMask = CollisionCategories.EdgeBody
         

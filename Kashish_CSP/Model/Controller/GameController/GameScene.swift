@@ -13,8 +13,8 @@ import CoreMotion
 public class GameScene: SKScene, SKPhysicsContactDelegate
 {
     //MARK: Invader Data
-    let rowsOfInvaders : Int = 4
-    var invaderSpeed : Int = 2     //change to make the invaders faster or slower
+    let rowsOfInvaders : Int = 1
+    var invaderSpeed : Double = 2     //change to make the invaders faster or slower
     var invadersThatCanFire : [Invader] = []
     
     //MARK: Player Data
@@ -86,7 +86,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 {
                     node, stop in
                     let invader = node as! SKSpriteNode
-                    invader.position.y -= CGFloat(10)
+                    invader.position.y -= CGFloat(2)
                 }
                 changeDirection = false
             }
