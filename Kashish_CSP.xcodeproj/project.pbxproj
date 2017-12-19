@@ -39,6 +39,7 @@
 		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
 		ACAAFF3B1FD9D367007F3FC1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */; };
 		ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */; };
+		ACC67DEB1FE9A4CE00DAEE09 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				AC2AB7201FE1AFDC009794BD /* Player.swift */,
 				AC2AB7211FE1AFDC009794BD /* PlayerLaser.swift */,
 				AC2AB7221FE1AFDC009794BD /* Projectile.swift */,
+				ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */,
 			);
 			path = GameModel;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				AC66CA261FA25B1100A98F87 /* InternetMasterViewController.swift in Sources */,
 				ACAAFF3B1FD9D367007F3FC1 /* ArtCell.swift in Sources */,
 				ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */,
+				ACC67DEB1FE9A4CE00DAEE09 /* DeathScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

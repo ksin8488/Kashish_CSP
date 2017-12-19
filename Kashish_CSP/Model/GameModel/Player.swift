@@ -39,7 +39,7 @@ public class Player: SKSpriteNode
         self.physicsBody?.isDynamic = true
         self.physicsBody?.usesPreciseCollisionDetection = false
         self.physicsBody?.categoryBitMask = CollisionCategories.Player
-        self.physicsBody?.contactTestBitMask = CollisionCategories.InvaderBullet | CollisionCategories.Invader
+        self.physicsBody?.contactTestBitMask = CollisionCategories.InvaderLaser | CollisionCategories.Invader
         self.physicsBody?.collisionBitMask = CollisionCategories.EdgeBody
         self.physicsBody?.allowsRotation = false
         animate()
