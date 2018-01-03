@@ -15,10 +15,10 @@ public class DeathScene: SKScene
     {
         self.backgroundColor = SKColor.green
         
-        let gameOver = SKLabelNode(text: "YOU HAVE DIED!")
+        let gameOver = SKLabelNode(text: "YOU HAVE DIED!")      //change game over text
         gameOver.name = "game over"
-        gameOver.fontSize = 65
-        gameOver.fontColor = SKColor.red
+        gameOver.fontSize = 55      //change font size
+        gameOver.fontColor = SKColor.red    //change color
         gameOver.position = CGPoint(x: frame.midX, y: frame.midY)
         
         addChild(gameOver)
