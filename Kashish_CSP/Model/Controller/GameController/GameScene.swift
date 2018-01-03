@@ -13,8 +13,8 @@ import CoreMotion
 public class GameScene: SKScene, SKPhysicsContactDelegate
 {
     //MARK: Invader Data
-    let rowsOfInvaders : Int = 1
-    var invaderSpeed : Double = 2     //change to make the invaders faster or slower
+    let rowsOfInvaders : Int = 4
+    var invaderSpeed : Double = 20     //change to make the invaders faster or slower
     var invadersThatCanFire : [Invader] = []
     
     //MARK: Player Data
@@ -35,7 +35,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         let numberOfInvaders = gameLevel * 2 + 1
         for invaderRow in 0..<numberOfInvaders
         {
-            for invaderCol in 0..<numberOfInvaders
+            for invaderCol in 0 ..< numberOfInvaders
             {
                 let currentInvader :Invader = Invader()     //current invader is invader
                 let halfWidth : CGFloat = currentInvader.size.width / 2
@@ -45,8 +45,8 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 currentInvader.invaderRow = invaderRow
                 currentInvader.invaderCol = invaderCol
                 
-                addChild(currentInvader)
-                if (invaderRow == rowsOfInvaders)
+                addChild(currentInvader)        //adds things to the screen
+                if (invaderRow == rowsOfInvaders)   //take this out and just have the code inside to have all invaders fire
                 {
                     invadersThatCanFire.append(currentInvader)
                 }
@@ -59,7 +59,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     private func setupPlayer() -> Void
     {
         //Frame or bounds
-        player.position = CGPoint(x:self.frame.midX, y:player.size.height/2 + 10)
+        player.position = CGPoint(x:self.frame.midX, y:player.size.height/2 + 10)   //carteason system
         addChild(player)
     }
     
@@ -73,11 +73,12 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             node, stop in
             let invader = node as! SKSpriteNode
             let invaderHalfWidth = invader.size.width / 2
-            invader.position.x -= CGFloat(self.invaderSpeed)
-            if(invader.position.x > self.rightBounds - invaderHalfWidth || invader.position.x < self.leftBounds + invaderHalfWidth)
+            invader.position.x -= CGFloat(self.invaderSpeed) //position - speed to move left and right
+            if(invader.position.x > self.rightBounds + invaderHalfWidth || invader.position.x < self.leftBounds - invaderHalfWidth)
             {
                 changeDirection = true
             }
+        }   //this wasn't here before
             
             if(changeDirection)
             {
@@ -86,25 +87,13 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 {
                     node, stop in
                     let invader = node as! SKSpriteNode
-                    invader.position.y -= CGFloat(2)
+                    invader.position.y -= CGFloat(10) //5
                 }
                 changeDirection = false
             }
             
         }
-        
-//        if(changeDirection == true)
-//        {
-//            self.invaderSpeed *= -1
-//            self.enumerateChildNodes(withName: "invader")
-//            {
-//                node, stop in
-//
-//            }
-//
-//        }
-        
-    }
+    //had a }
     
     private func invokeInvaderFire() -> Void    //runs once but has an infinite command as long as the app is runing
     {
@@ -160,13 +149,19 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     override public func didMove(to view: SKView) -> Void
     {
-        self.physicsWorld.gravity = CGVector(dx:0, dy:0)
+        self.physicsWorld.gravity = CGVector(dx:0, dy:0)        //if gravity is neg it moves up. Pos crashes down
         self.physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         self.physicsBody?.categoryBitMask = CollisionCategories.EdgeBody
         
-        backgroundColor = UIColor.magenta
+        let starField = SKEmitterNode(fileNamed: "StarField")
+        starField?.position = CGPoint(x: size.width / 2,y: size.height / 2)
+        starField?.zPosition = -1000 //puts field behind EVERYTHING
+        addChild(starField!)
+        
+        backgroundColor = UIColor.darkGray
         rightBounds = self.size.width - 30
+        
         setupInvaders()
         setupPlayer()
         invokeInvaderFire()
@@ -186,7 +181,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     override public func didSimulatePhysics()
     {
-        player.physicsBody?.velocity = CGVector(dx: accelerationX * 600, dy: 0) //take the acceleration and * it by 600 for change in x (dx like in Calculus?)
+        player.physicsBody?.velocity = CGVector(dx: accelerationX * 600, dy: 0) //take the acceleration and * it by 600 for change in x (dx like in Calculus?) Yes. dy is 0 because there is no change in y needed
     }
 
     //MARK:- Handle Motion
@@ -208,7 +203,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     public func didBegin(_ contact: SKPhysicsContact) -> Void
     {
         
-        var firstBody: SKPhysicsBody
+        var firstBody: SKPhysicsBody    //sets first and second Body as physics bodies
         var secondBody: SKPhysicsBody
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
@@ -235,6 +230,48 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.Player != 0))
         {
             print("Invader and Player Collision Contact")
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Player != 0) && (secondBody.categoryBitMask & CollisionCategories.InvaderLaser != 0))
+        {
+            player.die()    //lives death
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.Player != 0))
+        {
+            player.kill() //gameover?
+        }
+        
+        if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) && (secondBody.categoryBitMask & CollisionCategories.PlayerBullet != 0))
+        {
+            if (contact.bodyA.node?.parent == nil || contact.bodyB.node?.parent == nil)
+            {
+                return
+            }
+            
+            let theInvader = firstBody.node as! Invader
+            let newInvaderRow = theInvader.invaderRow - 1
+            let newInvaderCol = theInvader.invaderCol
+            if(newInvaderRow >= 1)
+            {
+                self.enumerateChildNodes(withName: "invader")
+                {
+                    node, stop in
+                    let invader = node as! Invader
+                    if invader.invaderRow == newInvaderRow && invader.invaderCol == newInvaderCol
+                    {
+                        self.invadersThatCanFire.append(invader)
+                        stop.pointee = true
+                    }
+                }
+            }
+            let invaderIndex = invadersThatCanFire.index(of: firstBody.node as! Invader)
+            if(invaderIndex != nil)
+            {
+                invadersThatCanFire.remove(at: invaderIndex!)
+            }
+            theInvader.removeFromParent()
+            secondBody.node?.removeFromParent()
         }
         
     }
