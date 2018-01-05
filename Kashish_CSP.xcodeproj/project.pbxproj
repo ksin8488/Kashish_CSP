@@ -38,6 +38,9 @@
 		AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */; };
 		AC96A62B1FCF39E5005C50F8 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */; };
 		ACAAFF3B1FD9D367007F3FC1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */; };
+		ACB204FC200006EF00085329 /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB204FB200006EF00085329 /* BucketItemCell.swift */; };
+		ACB20501200008E600085329 /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB20500200008E600085329 /* BucketItem.swift */; };
+		ACB205032000095200085329 /* bucket.csv in Resources */ = {isa = PBXBuildFile; fileRef = ACB205022000095200085329 /* bucket.csv */; };
 		ACB973FE1FD72A3D00ACEFD3 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */; };
 		ACC67DEB1FE9A4CE00DAEE09 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactViewController.swift; sourceTree = "<group>"; };
 		AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
+		ACB204FB200006EF00085329 /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
+		ACB20500200008E600085329 /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		ACB205022000095200085329 /* bucket.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bucket.csv; path = ../../../../Downloads/bucket.csv; sourceTree = "<group>"; };
 		ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +139,7 @@
 				AC2AB72B1FE1B2F6009794BD /* GameModel */,
 				AC30F59C1FC35F77007ED23E /* Cuddleable.swift */,
 				AC30F59E1FC36019007ED23E /* StuffedAnimal.swift */,
-				AC66CA181FA257DA00A98F87 /* Controller */,
+				ACB20500200008E600085329 /* BucketItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 		AC66CA051FA256D800A98F87 /* Kashish_CSP */ = {
 			isa = PBXGroup;
 			children = (
+				AC66CA181FA257DA00A98F87 /* Controller */,
 				AC30F59B1FC35F39007ED23E /* Model */,
 				AC66CA1A1FA2586E00A98F87 /* View */,
 				AC66CA191FA2583A00A98F87 /* Resources */,
@@ -170,7 +177,6 @@
 				AC2AB70E1FE1AC95009794BD /* GameController */,
 				AC66CA061FA256D800A98F87 /* AppDelegate.swift */,
 				AC66CA081FA256D800A98F87 /* ViewController.swift */,
-				AC66CA1F1FA25AC700A98F87 /* DataViewController.swift */,
 				AC66CA1D1FA25AAA00A98F87 /* AbstractionViewController.swift */,
 				AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */,
 				AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */,
@@ -178,6 +184,7 @@
 				AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */,
 				AC66CA251FA25B1100A98F87 /* InternetMasterViewController.swift */,
 				ACAAFF3A1FD9D367007F3FC1 /* ArtCell.swift */,
+				ACB204FF200008A100085329 /* DataView */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 		AC66CA191FA2583A00A98F87 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACB205022000095200085329 /* bucket.csv */,
 				AC2AB71A1FE1AE98009794BD /* Utilities.swift */,
 				AC2AB7191FE1ADF0009794BD /* Sounds */,
 				AC66CA0D1FA256D800A98F87 /* Assets.xcassets */,
@@ -202,6 +210,15 @@
 				ACB973FD1FD72A3D00ACEFD3 /* DrawingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ACB204FF200008A100085329 /* DataView */ = {
+			isa = PBXGroup;
+			children = (
+				AC66CA1F1FA25AC700A98F87 /* DataViewController.swift */,
+				ACB204FB200006EF00085329 /* BucketItemCell.swift */,
+			);
+			path = DataView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +282,7 @@
 			files = (
 				AC66CA111FA256D800A98F87 /* LaunchScreen.storyboard in Resources */,
 				AC2AB7171FE1ADB3009794BD /* boss sound.mp3 in Resources */,
+				ACB205032000095200085329 /* bucket.csv in Resources */,
 				AC2AB7181FE1ADB3009794BD /* extra sound.mp3 in Resources */,
 				AC2AB7141FE1ADB3009794BD /* laser sound.mp3 in Resources */,
 				AC66CA0E1FA256D800A98F87 /* Assets.xcassets in Resources */,
@@ -286,8 +304,10 @@
 				AC2AB70D1FE1AB04009794BD /* StartScene.swift in Sources */,
 				AC66CA091FA256D800A98F87 /* ViewController.swift in Sources */,
 				AC2AB70C1FE1AB04009794BD /* LevelCompleteScene.swift in Sources */,
+				ACB20501200008E600085329 /* BucketItem.swift in Sources */,
 				AC2AB7251FE1AFDC009794BD /* Player.swift in Sources */,
 				AC66CA281FA25CF800A98F87 /* ImpactViewController.swift in Sources */,
+				ACB204FC200006EF00085329 /* BucketItemCell.swift in Sources */,
 				AC2AB7261FE1AFDC009794BD /* PlayerLaser.swift in Sources */,
 				AC66CA241FA25AF800A98F87 /* ProgrammingViewController.swift in Sources */,
 				AC2AB7231FE1AFDC009794BD /* Invader.swift in Sources */,

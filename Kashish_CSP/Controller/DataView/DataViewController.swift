@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DataViewController : UIViewController
+public class DataViewController : UITableViewController
 {
     public override func viewDidLoad()
     {
