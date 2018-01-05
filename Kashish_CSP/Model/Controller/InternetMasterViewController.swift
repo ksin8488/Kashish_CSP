@@ -31,11 +31,11 @@ public class InternetMasterViewController : UITableViewController
         //TODO: Replace with your correct links
         addresses = [   //apple wants secure sites hence the "https:" part
             "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
-            "https://www.google.com",
+            "https://apstudent.collegeboard.org/apcourse/ap-computer-science-principles",
+            "https://ctec.canyonsdistrict.org/",
+            "http://www.canyonsdistrict.org/",
+            "https://twitter.com/",
+            "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html",
         ]
         
         if let splitView = splitViewController  //optional type
@@ -91,7 +91,15 @@ public class InternetMasterViewController : UITableViewController
                     //TODO: Replace with your definitions - great time to use the """ operator
                     pageText = """
 
-                    All the definitions you wrote........
+                    TERMS
+                    URL (Uniform Resource Locator) - The address for a world wide web (www) page
+                    TCP (Transmission Control Protocol) - set of rules that governs the transmission of data over
+                    the internet or other networks
+                    IP (Internet Protocol) - method or protocol from which data is sent from one computer to another
+                    DNS (Domain Name System) - internet’s system from converting alphabetic names into numeric IP address
+                    What the internet means to me and the world
+                    The internet is a place that contains nearly everything. And to me, that means that it is a place where I can find and do anything (that is morally correct). If I want to communicate important information with others, just chat with friends, view funny videos, etc. I can do all that and much much more. And to the world, internet has changed everything. A message between nations can occur in seconds and knowledge is available to anyone that has a connection to the internet. Faraway places are now only a button click away and everyone is connected together by streams of data. And that has completely changed how people in today’s day and age live. It is a vital part of our societies both individually and nationally.
+
 
                     """ //""" text """ - makes everything between the quotes text
 
