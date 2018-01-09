@@ -92,10 +92,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-2s-Ymz">
-                                                <rect key="frame" x="41.5" y="35" width="93" height="30"/>
+                                                <rect key="frame" x="61" y="35" width="54" height="30"/>
                                                 <state key="normal" title="Abstractions Section">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="Internet Links">
+                                                        <fragment content="Internet">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="15"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -108,8 +108,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhl-vK-uRe">
-                                                <rect key="frame" x="38" y="70" width="100" height="30"/>
-                                                <state key="normal" title="Images Button"/>
+                                                <rect key="frame" x="28" y="70" width="120" height="30"/>
+                                                <state key="normal" title="Images/Creativity"/>
                                                 <connections>
                                                     <segue destination="BhZ-1F-giT" kind="show" action="showDetailViewController:sender:" id="xbr-J9-zML"/>
                                                 </connections>
