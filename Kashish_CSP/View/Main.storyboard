@@ -72,61 +72,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mJg-8Q-EDQ">
-                                <rect key="frame" x="99" y="410" width="176" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-I2-FGS">
-                                        <rect key="frame" x="65" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="QEP-dX-gGO" kind="show" id="gg4-cg-ePa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-2s-Ymz">
-                                        <rect key="frame" x="41.5" y="30" width="93" height="30"/>
-                                        <state key="normal" title="Abstractions Section">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Internet Links">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <segue destination="EPV-Oa-bmF" kind="show" id="6xS-x8-YRV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhl-vK-uRe">
-                                        <rect key="frame" x="38" y="60" width="100" height="30"/>
-                                        <state key="normal" title="Images Button"/>
-                                        <connections>
-                                            <segue destination="BhZ-1F-giT" kind="show" action="showDetailViewController:sender:" id="xbr-J9-zML"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm5-fa-4lG">
-                                        <rect key="frame" x="0.0" y="90" width="176" height="30"/>
-                                        <state key="normal" title="Star Wars Space Invaders"/>
-                                        <connections>
-                                            <segue destination="tsE-gW-VhX" kind="show" action="showDetailViewController:sender:" id="aT5-VW-sXr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdv-jg-JWZ">
-                                        <rect key="frame" x="22" y="120" width="132" height="30"/>
-                                        <state key="normal" title="DataViewController"/>
-                                        <connections>
-                                            <segue destination="Qgo-oF-ndB" kind="show" action="showDetailViewController:sender:" id="C4b-ow-aYN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-un-XXg" customClass="DrawingView" customModule="Kashish_CSP" customModuleProvider="target">
                                 <rect key="frame" x="37" y="64" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLk-iR-aG4">
+                                <rect key="frame" x="99" y="398" width="176" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mJg-8Q-EDQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="170"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-I2-FGS">
+                                                <rect key="frame" x="50.5" y="0.0" width="75" height="30"/>
+                                                <state key="normal" title="Algorithms"/>
+                                                <connections>
+                                                    <segue destination="QEP-dX-gGO" kind="show" id="gg4-cg-ePa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-2s-Ymz">
+                                                <rect key="frame" x="41.5" y="35" width="93" height="30"/>
+                                                <state key="normal" title="Abstractions Section">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Internet Links">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="EPV-Oa-bmF" kind="show" id="6xS-x8-YRV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhl-vK-uRe">
+                                                <rect key="frame" x="38" y="70" width="100" height="30"/>
+                                                <state key="normal" title="Images Button"/>
+                                                <connections>
+                                                    <segue destination="BhZ-1F-giT" kind="show" action="showDetailViewController:sender:" id="xbr-J9-zML"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm5-fa-4lG">
+                                                <rect key="frame" x="0.0" y="105" width="176" height="30"/>
+                                                <state key="normal" title="Star Wars Space Invaders"/>
+                                                <connections>
+                                                    <segue destination="tsE-gW-VhX" kind="show" action="showDetailViewController:sender:" id="aT5-VW-sXr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdv-jg-JWZ">
+                                                <rect key="frame" x="22" y="140" width="132" height="30"/>
+                                                <state key="normal" title="DataViewController"/>
+                                                <connections>
+                                                    <segue destination="Qgo-oF-ndB" kind="show" action="showDetailViewController:sender:" id="C4b-ow-aYN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsK-ep-HYC">
+                                        <rect key="frame" x="48" y="175" width="80" height="30"/>
+                                        <state key="normal" title="Abstraction"/>
+                                        <connections>
+                                            <segue destination="gPO-Ve-pcW" kind="show" id="gfX-Ah-2mK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -214,7 +226,7 @@
         <!--View Controller-->
         <scene sceneID="Drm-lN-W8W">
             <objects>
-                <viewController storyboardIdentifier="BlocksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nVu-TO-Ojt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlockViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nVu-TO-Ojt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6gg-02-rC9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -698,7 +710,7 @@
         <image name="waterScarcityMap" width="390" height="292"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Jf-0y-lNo"/>
+        <segue reference="KRO-2f-ci8"/>
         <segue reference="xbr-J9-zML"/>
     </inferredMetricsTieBreakers>
 </document>

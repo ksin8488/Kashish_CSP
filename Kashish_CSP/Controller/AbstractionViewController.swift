@@ -18,7 +18,7 @@ public class AbstractionViewController : UIPageViewController, UIPageViewControl
             self.newAbstractionViewController(abstractionLevel: "JavaCode"),
             self.newAbstractionViewController(abstractionLevel: "ByteCode"),
             self.newAbstractionViewController(abstractionLevel: "Binary"),
-            self.newAbstractionViewController(abstractionLevel: "AndGate")
+            self.newAbstractionViewController(abstractionLevel: "Gate")
         ]
     }()
     
