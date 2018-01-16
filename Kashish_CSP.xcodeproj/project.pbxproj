@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				ACC67DEA1FE9A4CE00DAEE09 /* DeathScene.swift */,
-				AC66CA1B1FA25A9100A98F87 /* CreativityViewController.swift */,
 				AC2AB7081FE1AB03009794BD /* GameScene.swift */,
 				AC2AB7091FE1AB03009794BD /* LevelCompleteScene.swift */,
 				AC2AB70A1FE1AB04009794BD /* StartScene.swift */,
@@ -179,6 +178,7 @@
 				AC66CA081FA256D800A98F87 /* ViewController.swift */,
 				AC66CA1D1FA25AAA00A98F87 /* AbstractionViewController.swift */,
 				AC66CA211FA25AE000A98F87 /* AlgorithmsViewController.swift */,
+				AC66CA1B1FA25A9100A98F87 /* CreativityViewController.swift */,
 				AC66CA271FA25CF800A98F87 /* ImpactViewController.swift */,
 				AC66CA231FA25AF800A98F87 /* ProgrammingViewController.swift */,
 				AC96A62A1FCF39E5005C50F8 /* InternetDetailViewController.swift */,

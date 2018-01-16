@@ -19,7 +19,7 @@ public class CreativityViewController : UICollectionViewController, UICollection
     {
         return [
             UIImage(named: "DrawingView_Art"),
-            UIImage(named: "cute_Mario-2"),
+            UIImage(named: "Haiku"),
             UIImage(named: "cute_Mario-2"),
             UIImage(named: "cute_Mario-2"),
             UIImage(named: "cute_Mario-2"),
